@@ -1,0 +1,24 @@
+// header
+@import 'components/h-nav';
+
+// main
+@import 'components/m-carousel';
+@import 'components/m-news';
+
+.main {
+    &__section {
+        @include flex(auto, column, nowrap);
+        min-height: 30rem;
+    }
+
+    &__channel {
+        @include flex(auto, row, wrap);
+        @include fontSecundary();
+        font-size: 0.75rem;
+        max-height: 2rem;
+        gap: 1.5rem;
+        align-items: center;
+    }
+}
+
+// footer

@@ -1,0 +1,32 @@
+header {
+    @include flex(auto, row, wrap);
+    @include fontPrimary();
+    @include padding();
+    min-height: 4.313rem;
+    background-color: white;
+    position: fixed;
+    width: 100%;
+}
+
+main {
+    @include flex(1 1 30rem, column, nowrap);
+    @include padding();
+    margin-top: calc(3.5rem + 2.313rem);
+}
+
+footer {
+    @include flex(auto, row, wrap);
+    @include fontPrimary();
+    @include padding();
+    min-height: 4.313rem;
+    margin-top: 5rem;
+    align-items: center;
+    justify-content: center;
+    background-color: $white;
+
+    p {
+        font-size: 1rem;
+        font-weight: bold;
+        color: $black20;
+    }
+}

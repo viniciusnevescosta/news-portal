@@ -1,0 +1,84 @@
+// imports
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap');
+
+// variables
+$black80: #121221;
+$black60: #444444;
+$black40: #6C6C6C;
+$black40: #6C6C6C;
+$black20: #949494;
+$white: #F8F8F8;
+
+// mixins
+@mixin flex($flex, $column, $wrap) {
+    flex: $flex;
+    display: flex;
+    flex-flow: $column $wrap;
+}
+
+@mixin grid($columns, $rows) {
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+    grid-template-rows: repeat($rows, 1fr);
+}
+
+@mixin fontPrimary {
+    font-family: 'Playfair Display', serif;
+}
+
+@mixin fontSecundary {
+    font-family: 'Roboto', sans-serif;    
+}
+
+@mixin padding {
+    padding: 0 7.813rem 0 7.813rem;
+}
+
+// html
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    @include flex(auto, column, wrap);
+    // @include padding();
+    color: $black80;
+    // background-color: $white;
+}
+
+h1, h2, h4 {
+    @include fontSecundary();
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.25rem;
+}
+
+
+h3 {
+    @include fontPrimary();
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+i {
+    color: $black60;
+    &:hover {
+        cursor: pointer;
+    }
+}

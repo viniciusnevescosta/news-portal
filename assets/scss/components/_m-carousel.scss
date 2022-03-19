@@ -1,0 +1,51 @@
+.main {
+    &__h1 {
+        @include flex(auto, column, wrap);
+    }
+
+    &__content {
+        @include flex(1 1 25rem, row, nowrap);
+        max-height: 25rem;
+    }
+
+    &__cover {
+        @include flex(auto, row, wrap);
+        border-radius: 0.5rem;
+        background-image: url(/assets/img/img1.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        &__impact {
+            @include flex(auto, column, wrap);
+            justify-content: end;
+            padding: 2rem 20rem 2rem 2rem;
+            gap: 1rem;
+            border-radius: 0.5rem;
+            color: $white;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 42.25%, rgba(0, 0, 0, 0.65) 100%);
+        }
+    }
+
+    &__info {
+        @include flex(auto, row, nowrap);
+        @include fontPrimary();
+        padding: 1.5rem;
+        min-width: 25%;
+        max-width: 25%;
+        color: $black60;
+        font-size: 1.125rem;
+        overflow-y: scroll;
+        overflow-x: hidden;
+
+        p {
+            &::first-line {
+                font-size: 1.625rem;
+            }
+        }
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+}

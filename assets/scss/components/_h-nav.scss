@@ -1,0 +1,32 @@
+.header {
+    &__nav {
+        @include flex(auto, row, wrap);
+    }
+
+    &__section {
+        @include flex(auto, row, wrap);
+        max-width: 50%;
+        align-items: center;
+        gap: 0.5rem;
+
+        &--end {
+            justify-content: end;
+            gap: 2rem;
+        }
+    }
+
+    &__p {
+        font-weight: bold;
+
+        &--black {
+            @include flex(auto, row, wrap);
+            align-items: center;
+            justify-content: center;
+            color: white;
+            background-color: $black80;
+            max-width: 4rem;
+            min-height: 2.313rem;
+            border-radius: 0.25rem;
+        }
+    }
+}
