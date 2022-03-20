@@ -23,6 +23,12 @@
             }
         }
 
+        &:hover {
+            cursor: pointer;
+            border-radius: 0.5rem;
+            background-color: #F7F7F7;
+        }
+
         @include lgDesktop {
             min-height: 25rem;
             max-height: 25rem;

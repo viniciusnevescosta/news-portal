@@ -13,6 +13,18 @@ body {
     color: $black80;
 }
 
+a {
+    text-decoration: none;
+    
+    &:focus {
+        color: $black80;
+    }
+
+    &:visited {
+        color: $black80;
+    }
+}
+
 i {
     color: $black60;
     
