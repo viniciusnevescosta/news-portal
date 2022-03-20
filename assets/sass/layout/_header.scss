@@ -1,3 +1,15 @@
+// html
+header {
+    @include flex(auto, row, wrap);
+    @include fontPrimary();
+    @include padding();
+    min-height: 4.313rem;
+    background-color: white;
+    position: fixed;
+    width: 100%;
+}
+
+// classes
 .header {
     &__nav {
         @include flex(auto, row, wrap);

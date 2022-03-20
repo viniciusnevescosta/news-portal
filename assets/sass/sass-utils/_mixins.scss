@@ -1,0 +1,23 @@
+@mixin flex($flex, $column, $wrap) {
+    flex: $flex;
+    display: flex;
+    flex-flow: $column $wrap;
+}
+
+@mixin grid($columns, $rows) {
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+    grid-template-rows: repeat($rows, 1fr);
+}
+
+@mixin padding {
+    padding: 0 7.813rem 0 7.813rem;
+}
+
+@mixin fontPrimary {
+    font-family: 'Playfair Display', serif;
+}
+
+@mixin fontSecundary {
+    font-family: 'Roboto', sans-serif;    
+}

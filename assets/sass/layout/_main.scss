@@ -1,10 +1,10 @@
-// header
-@import 'components/h-nav';
+main {
+    @include flex(1 1 30rem, column, nowrap);
+    @include padding();
+    margin-top: calc(3.5rem + 2.313rem);
+}
 
-// main
-@import 'components/m-carousel';
-@import 'components/m-news';
-
+// classes
 .main {
     &__section {
         @include flex(auto, column, nowrap);
@@ -20,5 +20,3 @@
         align-items: center;
     }
 }
-
-// footer

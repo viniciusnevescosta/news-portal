@@ -1,0 +1,38 @@
+// google fonts
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap');
+
+// family
+h1, h2, h4 {
+    @include fontSecundary();
+    font-weight: bold;
+}
+
+h3 {
+    @include fontPrimary();
+    font-weight: bold;
+}
+
+p {
+    @include fontPrimary();
+}
+
+// size
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.25rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+em {
+    font-size: 1.625rem;
+}

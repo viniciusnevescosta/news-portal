@@ -37,13 +37,7 @@
         font-size: 1.125rem;
         overflow-y: scroll;
         overflow-x: hidden;
-
-        p {
-            &::first-line {
-                font-size: 1.625rem;
-            }
-        }
-
+        
         &::-webkit-scrollbar {
             display: none;
         }
