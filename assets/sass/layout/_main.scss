@@ -18,10 +18,6 @@ main {
         gap: 1.5rem;
         align-items: center;
 
-        @include mobile {
-            justify-content: center;
-        }
-
         @include laptop {
             justify-content: center;
         }
