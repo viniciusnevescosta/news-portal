@@ -1,0 +1,31 @@
+.main {
+    &__card {
+        @include flex(auto, column, nowrap);
+        min-height: 18.375rem;
+        max-height: 18.375rem;
+        gap: 1rem;
+
+        &__img {
+            flex: auto;
+            min-height: 60%;
+            border-radius: 0.5rem;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        &__title {
+            overflow-y: scroll;
+            overflow-x: hidden;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+
+        @include lgDesktop {
+            min-height: 25rem;
+            max-height: 25rem;
+        }
+    }
+}

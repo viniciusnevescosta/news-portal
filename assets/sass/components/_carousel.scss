@@ -1,45 +1,115 @@
 .main {
-    &__h1 {
-        @include flex(auto, column, wrap);
+  &__h1 {
+    margin-bottom: 1rem;
+  }
+
+  &__content {
+    @include flex(1 1 25rem, row, nowrap);
+
+    @include mobile {
+      max-height: calc(25rem / 2);
     }
 
-    &__content {
-        @include flex(1 1 25rem, row, nowrap);
-        max-height: 25rem;
+    @include tablet {
+      max-height: calc(25rem / 2);
     }
 
-    &__cover {
-        @include flex(auto, row, wrap);
-        border-radius: 0.5rem;
-        background-image: url(/assets/img/img1.png);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
+    @include lgDesktop {
+      min-height: calc(25rem * 1.5);
+    }
+  }
 
-        &__impact {
-            @include flex(auto, column, wrap);
-            justify-content: end;
-            padding: 2rem 20rem 2rem 2rem;
-            gap: 1rem;
-            border-radius: 0.5rem;
-            color: $white;
-            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 42.25%, rgba(0, 0, 0, 0.65) 100%);
-        }
+  &__h3 {
+    max-height: 100%;
+  }
+
+  &__cover {
+    @include flex(auto, row, wrap);
+    border-radius: 0.5rem;
+    background-image: url(/assets/img/img1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    &__impact {
+      @include flex(auto, column, nowrap);
+      justify-content: end;
+      max-height: 100%;
+      padding: 2rem 20rem 2rem 2rem;
+      gap: 1rem;
+      border-radius: 0.5rem;
+      color: $white;
+      background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 42.25%,
+        rgba(0, 0, 0, 0.65) 100%
+      );
+
+      overflow-y: scroll;
+      overflow-x: hidden;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      @include smMobile {
+        padding: 0rem 0rem 0rem 0rem;
+        gap: 0.5rem;
+      }
+
+      @include mobile {
+        padding: 1rem 1rem 1rem 1rem;
+        gap: 0.5rem;
+      }
+
+      @include tablet {
+        padding: 1rem 1rem 1rem 1rem;
+        gap: 0.5rem;
+      }
+
+      @include laptop {
+        padding: 1rem 1rem 1rem 1rem;
+        gap: 0.5rem;
+      }
+
+      @include lgDesktop {
+        padding: 2rem 50rem 2rem 2rem;
+      }
+    }
+  }
+
+  &__info {
+    @include flex(auto, row, nowrap);
+    padding: 1.5rem;
+    min-width: 25%;
+    max-width: 25%;
+    color: $black60;
+    font-size: 1.125rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar {
+      display: none;
     }
 
-    &__info {
-        @include flex(auto, row, nowrap);
-        @include fontPrimary();
-        padding: 1.5rem;
-        min-width: 25%;
-        max-width: 25%;
-        color: $black60;
-        font-size: 1.125rem;
-        overflow-y: scroll;
-        overflow-x: hidden;
-        
-        &::-webkit-scrollbar {
-            display: none;
-        }
+    @include smMobile {
+      display: none;
     }
+
+    @include mobile {
+      display: none;
+    }
+
+    @include tablet {
+      display: none;
+    }
+
+    @include laptop {
+      display: none;
+    }
+
+    @include desktop {
+      display: none;
+    }
+  }
 }

@@ -7,6 +7,10 @@ header {
     background-color: white;
     position: fixed;
     width: 100%;
+
+    @include smMobile {
+        position: static;
+    }
 }
 
 // classes

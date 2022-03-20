@@ -1,9 +1,11 @@
 // sass-utils
+@import 'sass-utils/responsive';
 @import 'sass-utils/variables';
 @import 'sass-utils/mixins';
 
 // components
 @import 'components/carousel';
+@import 'components/cards';
 
 // layout
 @import 'layout/header';

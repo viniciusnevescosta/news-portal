@@ -1,23 +1,39 @@
 @mixin flex($flex, $column, $wrap) {
-    flex: $flex;
-    display: flex;
-    flex-flow: $column $wrap;
+  flex: $flex;
+  display: flex;
+  flex-flow: $column $wrap;
 }
 
 @mixin grid($columns, $rows) {
-    display: grid;
-    grid-template-columns: repeat($columns, 1fr);
-    grid-template-rows: repeat($rows, 1fr);
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  grid-template-rows: repeat($rows, 1fr);
 }
 
 @mixin padding {
-    padding: 0 7.813rem 0 7.813rem;
+  padding: 0 7.813rem 0 7.813rem;
+
+  @include smMobile {
+    padding: 0 1rem 0 1rem;
+  }
+
+  @include mobile {
+    padding: 0 2.188rem 0 2.188rem;
+  }
+
+  @include tablet {
+    padding: 0 3.75rem 0 3.75rem;
+  }
+
+  @include laptop {
+    padding: 0 3.75rem 0 3.75rem;
+  }
 }
 
 @mixin fontPrimary {
-    font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
 }
 
 @mixin fontSecundary {
-    font-family: 'Roboto', sans-serif;    
+  font-family: "Roboto", sans-serif;
 }

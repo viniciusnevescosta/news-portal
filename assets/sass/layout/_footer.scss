@@ -11,6 +11,10 @@ footer {
     p {
         font-size: 1rem;
         font-weight: bold;
-        color: $black20;
+        color: $black40;
+    }
+
+    @include mobile {
+        margin-top: 1rem;
     }
 }

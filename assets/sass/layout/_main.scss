@@ -8,7 +8,6 @@ main {
 .main {
     &__section {
         @include flex(auto, column, nowrap);
-        min-height: 30rem;
     }
 
     &__channel {
@@ -18,5 +17,13 @@ main {
         max-height: 2rem;
         gap: 1.5rem;
         align-items: center;
+
+        @include mobile {
+            justify-content: center;
+        }
+
+        @include laptop {
+            justify-content: center;
+        }
     }
 }
