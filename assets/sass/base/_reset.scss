@@ -21,3 +21,20 @@ i {
     }
 }
 
+::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+    background-color: $black80;
+
+    &:hover {
+        background-color: $black60;
+    }
+}
+
+::selection {
+    color: $white;
+    background: $black80;
+}
