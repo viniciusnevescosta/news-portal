@@ -8,6 +8,7 @@ main {
 .main {
     &__section {
         @include flex(auto, column, nowrap);
+        max-height: 100%;
     }
 
     &__channel {

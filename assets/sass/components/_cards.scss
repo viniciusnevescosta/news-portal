@@ -2,7 +2,7 @@
     &__card {
         @include flex(auto, column, nowrap);
         min-height: 18.375rem;
-        max-height: 18.375rem;
+        // max-height: 18.375rem;
         gap: 1rem;
 
         &__img {
@@ -27,11 +27,6 @@
             cursor: pointer;
             border-radius: 0.5rem;
             background-color: #F7F7F7;
-        }
-
-        @include lgDesktop {
-            min-height: 25rem;
-            max-height: 25rem;
         }
     }
 }

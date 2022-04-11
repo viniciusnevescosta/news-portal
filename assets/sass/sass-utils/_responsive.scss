@@ -14,8 +14,6 @@ $max-laptop: 1024px;
 $min-desktop: 1025px;
 $max-desktop: 1200px;
 
-$min-lgDesktop: 1600px;
-
 // mixins
 @mixin smMobile {
     @media (min-width: #{$min-smMobile}) and (max-width: #{$max-smMobile}) {
@@ -43,12 +41,6 @@ $min-lgDesktop: 1600px;
 
 @mixin desktop {
     @media (min-width: #{$min-desktop}) and (max-width: #{$max-desktop}) {
-        @content;
-    }
-}
-
-@mixin lgDesktop {
-    @media (min-width: #{$min-lgDesktop}) {
         @content;
     }
 }

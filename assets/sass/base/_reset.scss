@@ -11,10 +11,12 @@ html {
 body {
     @include flex(auto, column, wrap);
     color: $black80;
+    min-height: 100vh; // ocupar a tela inteira
 }
 
 a {
     text-decoration: none;
+    color: $black80;
     
     &:focus {
         color: $black80;

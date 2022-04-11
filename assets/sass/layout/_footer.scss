@@ -3,10 +3,11 @@ footer {
     @include fontPrimary();
     @include padding();
     min-height: 4.313rem;
-    margin-top: 5rem;
+    max-height: 4.313rem;
     align-items: center;
     justify-content: center;
     background-color: $white;
+    margin-top: 4.313rem;
 
     p {
         font-size: 1rem;

@@ -13,10 +13,6 @@
     @include tablet {
       max-height: calc(25rem / 2);
     }
-
-    @include lgDesktop {
-      min-height: calc(25rem * 1.5);
-    }
   }
 
   &__h3 {
@@ -71,10 +67,6 @@
         padding: 1rem 1rem 1rem 1rem;
         gap: 0.5rem;
       }
-
-      @include lgDesktop {
-        padding: 2rem 50rem 2rem 2rem;
-      }
     }
   }
 
@@ -83,14 +75,15 @@
     padding: 1.5rem;
     min-width: 25%;
     max-width: 25%;
+    max-height: 25rem;
     color: $black60;
     font-size: 1.125rem;
     overflow-y: scroll;
     overflow-x: hidden;
 
-    &::-webkit-scrollbar {
-      display: none;
-    }
+    // &::-webkit-scrollbar {
+    //   display: none;
+    // }
 
     @include smMobile {
       display: none;
