@@ -1,0 +1,80 @@
+.splash {
+    top: 0px;
+	left: 0px;
+	width: 100vw;
+	height: 100vh;
+    display: none;
+	position: fixed;
+    align-items: center;
+    justify-content: center;
+	background-color: $black80;
+	z-index: 3000;
+
+    @include mobile {
+        &--active {
+            @include flex(auto, column, wrap);
+            gap: 1rem;
+        }
+    }
+
+    @include tablet {
+        &--active {
+            @include flex(auto, column, wrap);
+            gap: 1rem;
+        }
+    }
+
+    @include laptop {
+        &--active {
+            @include flex(auto, column, wrap);
+            gap: 1rem;
+        }
+    }
+
+    &__logo {
+        @include flex(auto, column, wrap);
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+
+        @include mobile {
+            img {
+                max-width: 10rem;
+                // animation
+                animation: rotateOut;
+                animation-duration: 2s;
+                animation-delay: 1s;
+            }
+        }
+
+        @include tablet {
+            img {
+                max-width: 10rem;
+                // animation
+                animation: rotateOut;
+                animation-duration: 2s;
+                animation-delay: 1s;
+            }
+        }
+
+        @include laptop {
+            img {
+                max-width: 10rem;
+                // animation
+                animation: rotateOut;
+                animation-duration: 2s;
+                animation-delay: 1s;
+            }
+        }
+
+        h3 {
+            color: white;
+            text-align: center;
+        }
+    }
+
+    // animation
+    animation: fadeOut;
+    animation-duration: 1s;
+    animation-delay: 2s;
+}

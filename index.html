@@ -12,7 +12,7 @@
     <meta name="author" content="Vinícius Neves Costa">
     <meta property="og:title" content="News Portal: The best news hub!">
     <meta property="og:description" content="Start the day always updated with us!">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1584474280023-d85a18aad4a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1584474280023-d85a18aad4a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"> <!-- API PRA GERAR IMGS -->
     <meta property="og:url" content="https://news-portal-nine.vercel.app/">
     <meta name="twitter:card" content="summary_large_image">
     
@@ -27,6 +27,13 @@
 
     <!-- icons -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- animations -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
 </head>
 <body>
     <header>
@@ -148,5 +155,14 @@
     <footer>
         <p>Copyright 2021 News Portal</p>
     </footer>
+    <div class="splash splash--active">
+        <div class="splash__logo">
+            <img src="/assets/img/splash.svg" alt="Logo do site" srcset="" draggable="false">
+            <h3>News Portal</h3>
+        </div>
+    </div>
+
+    <!-- js -->
+    <script type="module" src="/assets/js/main.js"></script>
 </body>
 </html>
