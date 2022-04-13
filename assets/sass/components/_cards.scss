@@ -19,6 +19,10 @@
             min-height: 2rem;
             overflow-y: scroll;
             overflow-x: hidden;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
         }
 
         &:hover {

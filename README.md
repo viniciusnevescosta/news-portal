@@ -11,6 +11,8 @@ notificar firebase
 
 outras linguas
 
+clima
+
 -->
 
 
@@ -24,4 +26,8 @@ remixicon
 
 lordicon
 
-google fonts -->
+google fonts 
+
+currentsapi
+
+-->
