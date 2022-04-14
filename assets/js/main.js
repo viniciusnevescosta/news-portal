@@ -4,10 +4,14 @@
 import { splash } from './splash.js';
 splash();
 
+// News api
+import { newsApi } from './news.js';
+newsApi()
+
 // navbar
 import { navBar } from './navBar.js';
 navBar();
 
-// News api
-import { newsApi } from './api.js';
-newsApi()
+// metatag
+import { metatag } from './unsplash.js';
+metatag();

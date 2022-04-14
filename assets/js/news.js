@@ -117,8 +117,6 @@ export function newsApi() {
         const requestNews = await rNews.json()
         postNew(requestNews.news)
 
-        console.log(requestNews)
-
         // Trend notice
         const nTrend = new Trend(requestNews.news[0].published, requestNews.news[0].author, requestNews.news[0].title, requestNews.news[0].url, requestNews.news[0].image, requestNews.news[0].description)
         nTrend.post()
