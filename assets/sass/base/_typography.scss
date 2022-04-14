@@ -10,6 +10,7 @@ h1, h2, h4 {
 h3 {
     @include fontPrimary();
     font-weight: bold;
+    text-shadow: 0px 3px 5px rgba(0, 0, 0, 1);
 }
 
 p, em {

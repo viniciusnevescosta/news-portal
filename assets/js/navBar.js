@@ -14,3 +14,5 @@ export function navBar() {
         }
     })
 }
+
+// modificar pela classe

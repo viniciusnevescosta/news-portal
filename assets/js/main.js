@@ -66,13 +66,53 @@ window.addEventListener('load', async () => {
     }
     
     class Trend extends Noticia {
-        constructor(publishedAt, source, title, url, urlToImage, description = null) {
+        constructor(publishedAt, source, title, url, urlToImage, description) {
             super(publishedAt, source, title, url, urlToImage);
             this.description = description;
         }
+        postar(lugar) {
+            const a = document.createElement('a');
+            a.href = this.url;
+            a.target = '_blank';
+            a.rel = 'noreferrer noopener'
+            a.classList.add('main__cover');
+
+            const img = document.createElement('div');
+            img.classList.add('main__cover__impact');
+            img.style.backgroundImage = 'url('+this.urlToImage+')';
+            a.appendChild(img);
+
+            const title = document.createElement('h3');
+            title.classList.add('main__h3');
+            title.innerText = this.title
+            img.appendChild(title);
+
+            const channel = document.createElement('div');
+            channel.classList.add('main__channel');
+            img.appendChild(channel);
+
+            const date = document.createElement('p');
+            date.innerText = this.publishedAt;
+            channel.appendChild(date);
+
+            const source = document.createElement('p');
+            source.innerText = this.source;
+            channel.appendChild(source);
+
+            const info = document.createElement('div');
+            info.classList.add('main__info');
+
+            const p = document.createElement('p');
+            p.innerText = this.description;
+            info.appendChild(p)
+
+            lugar.appendChild(a);
+            lugar.appendChild(info);
+        }
     }
     
-    const oi = new Noticia(api.news[0].published, api.news[0].author, api.news[0].title, api.news[0].url, api.news[0].image);
+    const oi = new Trend(api.news[0].published, api.news[0].author, api.news[0].title, api.news[0].url, api.news[0].image, api.news[0].description);
+
     const oi2 = new Noticia(api.news[1].published, api.news[1].author, api.news[1].title, api.news[1].url, api.news[1].image);
     const oi3 = new Noticia(api.news[2].published, api.news[2].author, api.news[2].title, api.news[2].url, api.news[2].image);
     const oi4 = new Noticia(api.news[3].published, api.news[3].author, api.news[3].title, api.news[3].url, api.news[3].image);
@@ -101,11 +141,12 @@ window.addEventListener('load', async () => {
     const oi27 = new Noticia(api.news[26].published, api.news[26].author, api.news[26].title, api.news[26].url, api.news[26].image);
     const oi28 = new Noticia(api.news[27].published, api.news[27].author, api.news[27].title, api.news[27].url, api.news[27].image);
     const oi29 = new Noticia(api.news[28].published, api.news[28].author, api.news[28].title, api.news[28].url, api.news[28].image);
-    // const oi30 = new Noticia(api.news[30].published, api.news[30].author, api.news[30].title, api.news[30].url, api.news[30].image);
+    const oi30 = new Noticia(api.news[29].published, api.news[29].author, api.news[29].title, api.news[29].url, api.news[29].image);
 
+    const content = document.querySelectorAll('.main__content');
     const container = document.querySelector('.main__container');
 
-    oi.postar(container)
+    oi.postar(content[0]);
     oi2.postar(container)
     oi3.postar(container)
     oi4.postar(container)
@@ -134,7 +175,7 @@ window.addEventListener('load', async () => {
     oi27.postar(container)
     oi28.postar(container)
     oi29.postar(container)
-    // oi30.postar(container)
+    oi29.postar(container)
 })
 
 // infite scroll
