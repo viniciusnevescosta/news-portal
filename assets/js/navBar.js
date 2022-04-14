@@ -1,18 +1,22 @@
 export function navBar() {
-    window.addEventListener('scroll', (nav, footer) => {
+    var lastScrollTop = 0;
+
+    window.addEventListener("scroll", function(nav, footer) {
+        var st = window.pageYOffset || document.documentElement.scrollTop;
+        
         nav = document.querySelector('header');
         footer = document.querySelector('footer');
 
-        nav.style.display = 'none';
-        footer.style.display = 'none';
-    
-        if(nav.style.display === 'none') {
-            setTimeout(() => {
-                nav.style.display = 'flex';
-                footer.style.display = 'flex';
-            }, 450);
+        if (st > lastScrollTop){
+            nav.style.display = 'none';
+            footer.style.display = 'none';
+        } 
+        else {
+            nav.style.display = 'flex';
+            footer.style.display = 'flex';
         }
-    })
-}
+    
+        lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+    }, false);
 
-// modificar pela classe
+}

@@ -25,6 +25,10 @@ header {
         &--end {
             justify-content: end;
             gap: 2rem;
+
+            @include mobile {
+                justify-content: center;
+            }
         }
     }
 

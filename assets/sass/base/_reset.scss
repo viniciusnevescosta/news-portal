@@ -33,6 +33,11 @@ i {
     &:hover {
         cursor: pointer;
     }
+
+    @include mobile {
+        width: 0.5rem;
+        height: 0.5rem;
+    }
 }
 
 ::-webkit-scrollbar {
