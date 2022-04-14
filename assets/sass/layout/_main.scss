@@ -12,12 +12,19 @@ main {
     }
 
     &__channel {
-        @include flex(auto, row, wrap);
+        @include flex(auto, row, nowrap);
         @include fontSecundary();
         font-size: 0.75rem;
         max-height: 2rem;
         gap: 1.5rem;
         align-items: center;
+
+        overflow-y: scroll;
+        overflow-x: hidden;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
 
         @include laptop {
             justify-content: center;

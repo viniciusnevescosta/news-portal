@@ -4,9 +4,9 @@
 import { splash } from './splash.js';
 splash();
 
-// navbar
-import { navBar } from './navBar.js';
-navBar();
+// // navbar
+// import { navBar } from './navBar.js';
+// navBar();
 
 // News api
 window.addEventListener('load', async () => {
@@ -80,6 +80,9 @@ window.addEventListener('load', async () => {
             const img = document.createElement('div');
             img.classList.add('main__cover__impact');
             img.style.backgroundImage = 'url('+this.urlToImage+')';
+            img.style.backgroundRepeat = 'no-repeat';
+            img.style.backgroundPosition = 'center';
+            img.style.backgroundSize = 'cover';
             a.appendChild(img);
 
             const title = document.createElement('h3');
@@ -175,7 +178,7 @@ window.addEventListener('load', async () => {
     oi27.postar(container)
     oi28.postar(container)
     oi29.postar(container)
-    oi29.postar(container)
+    oi30.postar(container)
 })
 
 // infite scroll

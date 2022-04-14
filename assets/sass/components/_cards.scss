@@ -2,13 +2,14 @@
     &__card {
         @include flex(auto, column, nowrap);
         min-height: 18.375rem;
-        // max-height: 18.375rem;
+        max-width: 16.875rem;
+        min-width: 16.875rem;
         gap: 1rem;
 
         &__img {
             flex: auto;
-            min-height: 60%;
-            max-height: 60%;
+            min-height: 11rem;
+            max-height: 11rem;
             border-radius: 0.5rem;
             background-repeat: no-repeat;
             background-position: center;
@@ -16,7 +17,8 @@
         }
 
         &__title {
-            min-height: 2rem;
+            max-height: 4rem;
+            min-height: 4rem;
             overflow-y: scroll;
             overflow-x: hidden;
 
@@ -33,5 +35,29 @@
 
         // scroll reveal
         visibility: hidden;
+
+        @include mobile {
+            max-width: none;
+            min-width: none;
+            width: 100%;
+        }
+
+        @include tablet {
+            max-width: none;
+            min-width: none;
+            width: 100%;
+        }
+
+        @include laptop {
+            max-width: none;
+            min-width: none;
+            width: 100%;
+        }
+
+        @include desktop {
+            max-width: none;
+            min-width: none;
+            width: 100%;
+        }
     }
 }

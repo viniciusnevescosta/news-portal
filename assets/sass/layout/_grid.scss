@@ -1,18 +1,17 @@
 .main {
     &__h2 {
         margin-top: 2.5rem;
-
-        @include mobile {
-            // margin-top: 0rem;
-        }
     }
 
     &__container {
-        @include grid(4, auto);
+        @include grid();
         height: 100%;
         margin-top: 1rem;
         column-gap: 1.5rem;
         row-gap: 4rem;
+
+        justify-items: center;
+        align-items: center;
 
         @include smMobile {
             @include flex(auto, column, wrap);
@@ -25,7 +24,7 @@
         }
 
         @include tablet {
-            @include grid(2, 2);
+            @include grid();
         }
     }
 }
