@@ -1,9 +1,9 @@
 # NewsPortal
 
 <!-- 
-scroll reveal
-
 rolagem infinita
+
+atualizar quando chegar ao topo
  
 metatags api unsplash
 

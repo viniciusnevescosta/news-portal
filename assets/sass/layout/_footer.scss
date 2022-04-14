@@ -7,7 +7,12 @@ footer {
     align-items: center;
     justify-content: center;
     background-color: $white;
-    margin-top: 4.313rem;
+    // margin-top: 4.313rem;
+
+    position: fixed;
+    width: 100%;
+    z-index: 2000;
+    bottom: 0;
 
     p {
         font-size: 1rem;
