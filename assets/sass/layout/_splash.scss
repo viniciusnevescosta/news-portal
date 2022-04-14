@@ -10,25 +10,9 @@
 	background-color: $black80;
 	z-index: 3000;
 
-    @include mobile {
-        &--active {
-            @include flex(auto, column, wrap);
-            gap: 1rem;
-        }
-    }
-
-    @include tablet {
-        &--active {
-            @include flex(auto, column, wrap);
-            gap: 1rem;
-        }
-    }
-
-    @include laptop {
-        &--active {
-            @include flex(auto, column, wrap);
-            gap: 1rem;
-        }
+    &--active {
+        @include flex(auto, column, wrap);
+        gap: 1rem;
     }
 
     &__logo {
@@ -37,33 +21,29 @@
         justify-content: center;
         gap: 1rem;
 
+        img {
+            width: 100%;
+            // animation
+            animation: rotateOut;
+            animation-duration: 2s;
+            animation-delay: 1s;
+        }
+
         @include mobile {
             img {
                 max-width: 10rem;
-                // animation
-                animation: rotateOut;
-                animation-duration: 2s;
-                animation-delay: 1s;
             }
         }
 
         @include tablet {
             img {
                 max-width: 10rem;
-                // animation
-                animation: rotateOut;
-                animation-duration: 2s;
-                animation-delay: 1s;
             }
         }
 
         @include laptop {
             img {
                 max-width: 10rem;
-                // animation
-                animation: rotateOut;
-                animation-duration: 2s;
-                animation-delay: 1s;
             }
         }
 
