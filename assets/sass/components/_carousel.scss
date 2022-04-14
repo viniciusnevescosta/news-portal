@@ -5,7 +5,6 @@
 
   &__content {
     @include flex(1 1 25rem, row, nowrap);
-    max-height: 25rem;
 
     @include mobile {
       max-height: calc(25rem / 2);

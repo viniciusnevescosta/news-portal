@@ -30,11 +30,11 @@
         &:hover {
             cursor: pointer;
             border-radius: 0.5rem;
-            background-color: #F7F7F7;
+            box-shadow: -1px 9px 30px -7px rgba(0,0,0,0.47);
         }
 
         // scroll reveal
-        visibility: hidden;
+        // visibility: hidden;
 
         @include mobile {
             max-width: none;
