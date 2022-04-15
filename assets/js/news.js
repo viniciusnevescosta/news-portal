@@ -136,4 +136,5 @@ export function newsApi() {
             postNew(api.news)
         }
     })
+    
 }

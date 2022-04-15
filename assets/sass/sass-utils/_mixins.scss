@@ -10,6 +10,19 @@
   grid-auto-rows: max-content;
 }
 
+@mixin element() {
+  top: 0px;
+	left: 0px;
+	width: 100vw;
+	height: 100vh;
+  display: none;
+	position: fixed;
+  align-items: center;
+  justify-content: center;
+	background-color: $black80;
+	z-index: 3000;
+}
+
 @mixin padding {
   padding: 0 7.813rem 0 7.813rem;
 
