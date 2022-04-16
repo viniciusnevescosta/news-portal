@@ -113,12 +113,12 @@ export function newsApi() {
 
     window.addEventListener('load', async () => {   
         // News request
-        const rNews = await fetch(`https://api.currentsapi.services/v1/search?page_size=6&language=pt&apiKey=${key}`);
-        const requestNews = await rNews.json()
-        postNew(requestNews.news)
+        const res = await fetch(`https://api.currentsapi.services/v1/search?page_size=6&language=pt&apiKey=${key}`);
+        const api = await res.json()
+        postNew(api.news)
 
         // Trend notice
-        const nTrend = new Trend(requestNews.news[0].published, requestNews.news[0].author, requestNews.news[0].title, requestNews.news[0].url, requestNews.news[0].image, requestNews.news[0].description)
+        const nTrend = new Trend(api.news[0].published, api.news[0].author, api.news[0].title, api.news[0].url, api.news[0].image, api.news[0].description)
         nTrend.post()
     })
 
@@ -136,5 +136,4 @@ export function newsApi() {
             postNew(api.news)
         }
     })
-    
 }

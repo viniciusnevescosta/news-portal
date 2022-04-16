@@ -13,20 +13,8 @@ import { navBar } from './navBar.js';
 navBar();
 
 // search
-const searchBar = document.querySelector('.search__input');
-const key = "OXTZvmvSotcEv9FTrGzTfPfbql5Vgxr7R5Ga4TMjW_o";
-
-searchBar.addEventListener('input', async e => {
-    e.preventDefault;
-    let type = searchBar.value;
-    
-    if(type !== '') {
-        const res = await fetch(`https://api.currentsapi.services/v1/search?keywords=${type}&page_size=language=pt&apiKey=${key}`)
-
-        const api = await res.json();
-        console.log(api);
-    }
-})
+import { search } from './search.js';
+search();
 
 // metatag
 import { metatag } from './unsplash.js';
