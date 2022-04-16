@@ -1,7 +1,7 @@
 # NewsPortal
 
 <p align="center">
-  <img height="400em" src="assets/to_readme/Thumbnail.png"
+  <img height="600em" src="assets/to_readme/Thumbnail.png"
 </p>
 
 ![GitHub language count](https://img.shields.io/github/languages/count/Jolonte/News-Portal)
