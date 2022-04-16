@@ -28,7 +28,7 @@ export function newsApi() {
             const h4 = document.createElement('h4');
             h4.innerText = this.title;
             title.appendChild(h4);
-
+            
             const channel = document.createElement('div');
             channel.classList.add('main__channel');
             a.appendChild(channel);

@@ -40,6 +40,10 @@ i {
     }
 }
 
+.ri-lightbulb-line {
+    color: $white;
+}
+
 ::-webkit-scrollbar {
     width: 0.5rem;
 }
@@ -54,6 +58,6 @@ i {
 }
 
 ::selection {
-    color: $black20;
+    color: $white;
     background: $black60;
 }
